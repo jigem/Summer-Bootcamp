@@ -18,5 +18,8 @@ print(f"{special_letter}{word[8:11]}")
 print(f"{word[12:13].upper()}{word[5:6].upper()}")
 
 #no.5
+print(f"{word[11:-1].title()}{word[4:5]}")
+
+#no.6
 new = word.replace(" ", "l")
 print (new.isalpha())
