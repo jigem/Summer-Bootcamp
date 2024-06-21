@@ -1,21 +1,20 @@
 from random import randint
+import os 
 
-bet = []
+os.system("cls")
 
-for i in range(3):
-    bets = int(input("Enter your bets (0-9): "))
-    bet.append(bets)
-    
+#Optimized 6/21/24, minimized the forloop in bet and result
+
+#Input the bet of the user
+bet = [int(input(f"Enter bet {i+1} (0-9): ")) for i in range(3)]
 print("Your bets:", bet)
 
-result = []
+#Generate random numbers for the result
+# result = [randint(0, 9) for _ in range(3)]
+# print("Result:", result)
+result = [1,2,3]
 
-for i in range(3):
-    results = randint(0, 9)
-    result.append(results)
-    
-print("Result:", result)
-
+#Statements to determine the outcome for each, this part stays the same as i have not seen any better code
 if bet == result:
     print("You win! Perfect Combination!")
 elif sorted(bet) == sorted(result):
